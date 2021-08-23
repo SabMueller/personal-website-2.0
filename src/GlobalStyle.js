@@ -27,7 +27,7 @@ export default createGlobalStyle`
   --ff-cursive-alt: 'Kaushan Script', cursive;
   --ff-serif: 'Marcellus SC', serif;
   --ff-sans: 'Montserrat', sans-serif;
-  
+
 }
 
 *,

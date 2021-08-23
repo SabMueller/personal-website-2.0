@@ -6,7 +6,7 @@ export default function Home() {
     <Main>
       <BackgroundShapes />
       <h2>Hi, nice to meet you! I'm</h2>
-      <h1>Sabrina,</h1>
+      <h1>Sabrina Mueller,</h1>
       <h2>a passionate</h2>
       <Headline>Web Developer</Headline>
       <StyledLink to='/projects'>
@@ -95,6 +95,10 @@ const Headline = styled.h1`
   animation: ${gradient} 15s ease infinite;
   padding: 0.3rem;
   border-radius: 1rem;
+  color: transparent;
+  /*   background: linear-gradient(45deg, #a58fe9, #e37682);
+  background-clip: text;
+  -webkit-background-clip: text; */
 `;
 
 const Button = styled.button`

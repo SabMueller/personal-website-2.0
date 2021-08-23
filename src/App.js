@@ -24,6 +24,7 @@ function App() {
       </Switch>
       <Navigation />
       <About />
+      <Portfolio />
     </div>
   );
 }
