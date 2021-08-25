@@ -6,7 +6,7 @@ import profilePic from '../images/profilePic.jpeg';
 
 export default function About() {
   return (
-    <Section>
+    <Section id='about'>
       <h1>About</h1>
       <Paragraph>
         {' '}

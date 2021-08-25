@@ -1,19 +1,18 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
 export default function Navigation() {
   return (
     <NavWrapper>
-      <StyledNavLink activeClassName='active' exact to='/'>
+      <StyledNavLink activeClassName='active' href='#top'>
         Home
       </StyledNavLink>
-      <StyledNavLink className='link' to='/about'>
+      <StyledNavLink className='link' href='/#about'>
         About Me
       </StyledNavLink>
-      <StyledNavLink className='link' to='/portfolio'>
+      <StyledNavLink className='link' href='/#projects'>
         Portfolio
       </StyledNavLink>
-      <StyledNavLink className='link' to='/contact'>
+      <StyledNavLink className='link' href='/#contact'>
         Contact
       </StyledNavLink>
     </NavWrapper>
@@ -37,7 +36,7 @@ const NavWrapper = styled.section`
   }
 `;
 
-const StyledNavLink = styled(NavLink)`
+const StyledNavLink = styled.a`
   color: var(--white);
   font-family: Montserrat, sans-serif;
   text-decoration: none;

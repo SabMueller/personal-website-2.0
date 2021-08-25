@@ -1,16 +1,19 @@
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'react-router-dom';
+import arrowRight from '../images/arrowRight.png';
 
 export default function Home() {
   return (
-    <Main>
+    <Main id='home'>
       <BackgroundShapes />
       <h2>Hi, nice to meet you! I'm</h2>
       <h1>Sabrina Mueller,</h1>
       <h2>a passionate</h2>
       <Headline>Web Developer</Headline>
-      <StyledLink to='/projects'>
-        <Button>View My Projects</Button>
+      <StyledLink href='#projects'>
+        <Button>
+          View My Projects
+          <img src={arrowRight} alt='arrow icon' />
+        </Button>
       </StyledLink>
     </Main>
   );
@@ -112,9 +115,17 @@ const Button = styled.button`
   cursor: pointer;
   z-index: 100;
   font-size: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+
+  img {
+    width: 0.8rem;
+  }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   text-decoration: none;
   z-index: 100;
 `;

@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <ContactSection>
+    <ContactSection id='contact'>
       <h1>Get in Touch</h1>
       <ContactForm
         id='contact-form'
