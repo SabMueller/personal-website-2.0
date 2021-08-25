@@ -25,24 +25,24 @@ const NavWrapper = styled.section`
   align-items: center;
   justify-content: space-around;
 
-  background-color: #1b242f;
-  border-bottom: 4px solid #04c2c9;
+  background-color: var(--black);
+  border-bottom: 4px solid var(--primary);
   height: 3.125rem;
   position: sticky;
   top: 0;
   z-index: 999;
 
   .active {
-    color: #ff3e41;
+    color: var(--red);
   }
 `;
 
 const StyledNavLink = styled(NavLink)`
-  color: ivory;
+  color: var(--white);
   font-family: Montserrat, sans-serif;
   text-decoration: none;
 
   &:hover {
-    color: #ff3e41;
+    color: var(--red);
   }
 `;

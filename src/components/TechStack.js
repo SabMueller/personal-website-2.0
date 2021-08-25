@@ -127,12 +127,12 @@ const FlexWrapper = styled.div`
   width: 70vw;
   background-color: rgba(102, 99, 112, 15%);
   padding: 2rem;
-  filter: drop-shadow(0 0 0.75rem black);
+  filter: drop-shadow(0 0 0.75rem var(--black));
   border-radius: 3rem;
 
   h3 {
     width: 100vw;
-    color: #edaf97;
+    color: var(--orange-light);
     font-size: 2rem;
     font-family: var(--ff-serif);
     text-align: center;

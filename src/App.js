@@ -25,6 +25,7 @@ function App() {
       <Navigation />
       <About />
       <Portfolio />
+      <Contact />
     </div>
   );
 }

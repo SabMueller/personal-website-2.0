@@ -51,7 +51,7 @@ const Main = styled.main`
   position: relative;
   overflow: hidden;
   background-size: cover;
-  color: #0B688A;
+  color: var(--primary-darker);
   font-family: sans-serif;
   font-weight: 200;
   z-index: 1;
@@ -60,7 +60,7 @@ const Main = styled.main`
 
 h1 {
   font-family: Montserrat, sans-serif;
-  color: #f0fff1;
+  color: var(--white);
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -68,7 +68,7 @@ h1 {
 
 h2 {
   font-family: Montserrat, sans-serif;
-  color: #0c7297;
+  color: var(--primary-dark);
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -96,7 +96,7 @@ const Headline = styled.h1`
   padding: 0.3rem;
   border-radius: 1rem;
   color: transparent;
-  /*   background: linear-gradient(45deg, #a58fe9, #e37682);
+  /* 
   background-clip: text;
   -webkit-background-clip: text; */
 `;
@@ -105,8 +105,8 @@ const Button = styled.button`
   margin-top: 4rem;
   padding: 1rem;
   border-radius: 100vw;
-  border: 1px solid #f0fff1;
-  color: #f0fff1;
+  border: 1px solid var(--white);
+  color: var(--white);
   background-color: transparent;
   font-family: Montserrat, sans-serif;
   cursor: pointer;
@@ -118,7 +118,3 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   z-index: 100;
 `;
-
-//  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-//background-size: 400% 400%;
-//animation: ${gradient} 15s ease infinite;

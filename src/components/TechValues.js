@@ -126,14 +126,14 @@ const Hexagon = styled.div`
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     font-family: var(--ff-serif);
-    color: #ff3e41;
+    color: var(--red);
   }
 
   p {
     text-align: justify;
     text-justify: inter-word;
     width: 20rem;
-    color: ivory;
+    color: var(--white);
     line-height: 2;
   }
 
@@ -142,7 +142,7 @@ const Hexagon = styled.div`
     width: 46%;
     height: 80%;
     margin: auto;
-    color: white;
+    color: var(--white);
     background: linear-gradient(-180deg, #edaf97, #666370);
     display: flex;
     align-content: center;

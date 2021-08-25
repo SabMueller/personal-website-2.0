@@ -94,29 +94,30 @@ export default function Portfolio() {
 }
 
 const Section = styled.section`
-  background-color: ivory;
+  background-color: var(--white);
   padding: 1.5rem 0 4rem 0;
+  border-bottom: 7px solid var(--red);
 
   h1 {
     font-family: var(--ff-cursive-alt);
     font-size: 3.5rem;
     text-align: center;
     padding: 2rem;
-    color: #04c2c9;
+    color: var(--primary);
     margin-bottom: 4rem;
   }
   h2 {
     font-family: var(--ff-cursive-alt);
     font-size: 2.5rem;
     text-align: left;
-    color: #ff3e41;
+    color: var(--red);
     margin-top: 2rem;
   }
 
   h3 {
     font-family: var(--ff-serif);
     margin: 1.5rem 0 1rem 0;
-    color: #666370;
+    color: var(--gray-light);
     letter-spacing: 0.1rem;
     font-size: 1.3rem;
   }
@@ -130,7 +131,7 @@ const ProjectWrapper = styled.section`
   p {
     text-align: justify;
     text-justify: inter-word;
-    color: #2e3d4f;
+    color: var(--gray-dark);
     line-height: 1.5;
     margin: 2rem 0 2rem 0;
     width: 40vw;
@@ -149,7 +150,7 @@ const ProjectLink = styled.section`
 
   p {
     font-family: var(--ff-serif);
-    color: #666370;
+    color: var(--gray-light);
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
     width: auto;
@@ -178,7 +179,7 @@ const ProjectInfoWrapper = styled.section`
   }
   a {
     text-decoration: none;
-    color: #ff3e41;
+    color: var(--red);
     font-size: 1.7rem;
   }
 `;
@@ -190,11 +191,11 @@ const TechCloud = styled.section`
   gap: 1rem;
 
   span {
-    background-color: #04c2c9;
+    background-color: var(--primary);
     padding: 0.7rem;
     border-radius: 100vw;
     font-family: var(--ff-sans);
-    color: #2e3d4f;
+    color: var(--gray-dark);
     font-size: 1.1rem;
   }
 `;
@@ -208,7 +209,7 @@ const Iphone8 = styled.div`
 
   p {
     font-style: italic;
-    color: black;
+    color: var(--black);
     font-size: 1.2rem;
     text-align: center;
     width: 20vw;

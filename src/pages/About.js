@@ -42,21 +42,21 @@ export default function About() {
 const Section = styled.section`
   background-color: #2e3d4f;
   padding: 1.5rem 0 4rem 0;
-  border-bottom: 7px solid #04c2c9;
+  border-bottom: 7px solid var(--red);
 
   h1 {
     font-family: var(--ff-cursive-alt);
     font-size: 3.5rem;
     text-align: center;
     padding: 2rem;
-    color: #ff3e41;
+    color: var(--red);
   }
   h2 {
     font-family: var(--ff-cursive-alt);
     font-size: 2.5rem;
     text-align: center;
     padding: 2rem;
-    color: #ff3e41;
+    color: var(--red);
     margin-top: 2rem;
   }
 `;
@@ -64,7 +64,7 @@ const Section = styled.section`
 const AboutMeSection = styled.section``;
 
 const Paragraph = styled.p`
-  color: ivory;
+  color: var(--white);
   text-align: center;
   width: 50rem;
   margin: 0 auto;
@@ -83,7 +83,7 @@ const TechSection = styled.section`
   h5 {
     text-align: center;
     font-weight: normal;
-    color: ivory;
+    color: var(--white);
     margin-top: -1.5rem;
   }
 `;
