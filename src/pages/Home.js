@@ -9,7 +9,7 @@ export default function Home() {
       <h1>Sabrina Mueller,</h1>
       <h2>a passionate</h2>
       <Headline>Web Developer</Headline>
-      <StyledLink href='#projects'>
+      <StyledLink href='#portfolio'>
         <Button>
           View My Projects
           <img src={arrowRight} alt='arrow icon' />

@@ -1,20 +1,15 @@
 import styled from 'styled-components';
+import { NavHashLink } from 'react-router-hash-link';
 
 export default function Navigation() {
   return (
     <NavWrapper>
-      <StyledNavLink activeClassName='active' href='#top'>
+      <StyledLink smooth to='/#home'>
         Home
-      </StyledNavLink>
-      <StyledNavLink className='link' href='/#about'>
-        About Me
-      </StyledNavLink>
-      <StyledNavLink className='link' href='/#projects'>
-        Portfolio
-      </StyledNavLink>
-      <StyledNavLink className='link' href='/#contact'>
-        Contact
-      </StyledNavLink>
+      </StyledLink>
+      <StyledLink to='#about'>About Me</StyledLink>
+      <StyledLink to='#portfolio'>Portfolio</StyledLink>
+      <StyledLink to='#contact'>Contact</StyledLink>
     </NavWrapper>
   );
 }
@@ -36,10 +31,11 @@ const NavWrapper = styled.section`
   }
 `;
 
-const StyledNavLink = styled.a`
+const StyledLink = styled(NavHashLink)`
   color: var(--white);
   font-family: Montserrat, sans-serif;
   text-decoration: none;
+  color: ${(props) => (props.isActive ? 'var(--red)' : '(var--white)')};
 
   &:hover {
     color: var(--red);

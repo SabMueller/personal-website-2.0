@@ -6,7 +6,7 @@ import herokuLogo from '../images/herokuLogo.png';
 
 export default function Portfolio() {
   return (
-    <Section id='projects'>
+    <Section id='portfolio'>
       <h1>My Projects</h1>
       <ProjectWrapper>
         <FadeInWhenVisible>

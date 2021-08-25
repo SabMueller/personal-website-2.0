@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import styled from 'styled-components/macro';
+import FadeInWhenVisible from '../animations/FadeInWhenVisible';
 
 export default function Contact() {
   const {
@@ -48,92 +49,103 @@ export default function Contact() {
 
   return (
     <ContactSection id='contact'>
-      <h1>Get in Touch</h1>
-      <ContactForm
-        id='contact-form'
-        onSubmit={handleSubmit(onSubmit)}
-        noValidate>
-        {/* Row 1 of form */}
-        <div className='row formRow'>
-          <div className='col-6'>
-            <input
-              type='text'
-              name='name'
-              {...register('name', {
-                required: {
-                  value: true,
-                  message: 'Please enter your name',
-                },
-                maxLength: {
-                  value: 30,
-                  message: 'Please use 30 characters or less',
-                },
-              })}
-              className='form-control formInput'
-              placeholder='Your Name'></input>
+      <h1>Contact</h1>
+      <ContactInfo>
+        If you have a question or want to work together - just get in touch by
+        sending a message! 😊
+      </ContactInfo>
+      <FadeInWhenVisible>
+        <ContactForm
+          id='contact-form'
+          onSubmit={handleSubmit(onSubmit)}
+          noValidate>
+          {/* Row 1 of form */}
+          <div className='row formRow'>
+            <div className='col-6'>
+              <input
+                type='text'
+                name='name'
+                {...register('name', {
+                  required: {
+                    value: true,
+                    message: 'Please enter your name',
+                  },
+                  maxLength: {
+                    value: 30,
+                    message: 'Please use 30 characters or less',
+                  },
+                })}
+                className='form-control formInput'
+                placeholder='Your Name'></input>
+            </div>
+            <div className='col-6'>
+              <input
+                type='email'
+                name='email'
+                {...register('email', {
+                  required: true,
+                  pattern:
+                    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                })}
+                className='form-control formInput'
+                placeholder='Your Email'></input>
+            </div>
           </div>
-          <div className='col-6'>
-            <input
-              type='email'
-              name='email'
-              {...register('email', {
-                required: true,
-                pattern:
-                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-              })}
-              className='form-control formInput'
-              placeholder='Your Email'></input>
+          {/* Row 2 of form */}
+          <div className='row formRow'>
+            <div className='col'>
+              <input
+                type='text'
+                name='subject'
+                {...register('subject', {
+                  required: {
+                    value: true,
+                    message: 'Please Enter A Subject',
+                  },
+                  maxLength: {
+                    value: 45,
+                    message: 'Subject Cannot Exceed 45 Characters',
+                  },
+                })}
+                className='form-control formInput'
+                placeholder='Subject'></input>
+            </div>
           </div>
-        </div>
-        {/* Row 2 of form */}
-        <div className='row formRow'>
-          <div className='col'>
-            <input
-              type='text'
-              name='subject'
-              {...register('subject', {
-                required: {
-                  value: true,
-                  message: 'Please Enter A Subject',
-                },
-                maxLength: {
-                  value: 45,
-                  message: 'Subject Cannot Exceed 45 Characters',
-                },
-              })}
-              className='form-control formInput'
-              placeholder='Subject'></input>
+          {/* Row 3 of form */}
+          <div className='row formRow'>
+            <div className='col'>
+              <textarea
+                rows={3}
+                name='message'
+                {...register('message', {
+                  required: true,
+                })}
+                className='form-control formInput'
+                placeholder='Message'></textarea>
+            </div>
           </div>
-        </div>
-        {/* Row 3 of form */}
-        <div className='row formRow'>
-          <div className='col'>
-            <textarea
-              rows={3}
-              name='message'
-              {...register('message', {
-                required: true,
-              })}
-              className='form-control formInput'
-              placeholder='Message'></textarea>
-          </div>
-        </div>
-        <button className='submit-btn' type='submit'>
-          Submit
-        </button>
-        {errors.name && <p className='errorMessage'>{errors.name.message}</p>}
-        {errors.message && (
-          <span className='errorMessage'>Please enter a message</span>
-        )}
-        {errors.subject && (
-          <span className='errorMessage'>{errors.subject.message}</span>
-        )}
-        {errors.email && (
-          <span className='errorMessage'>
-            Please enter a valid email address
-          </span>
-        )}
-      </ContactForm>
+          <button className='submit-btn' type='submit'>
+            Submit
+          </button>
+          {errors.name && (
+            <span className='errorMessage'>{errors.name.message}</span>
+          )}
+          {errors.message && (
+            <span className='errorMessage'>Please enter a message</span>
+          )}
+          {errors.subject && (
+            <span className='errorMessage'>{errors.subject.message}</span>
+          )}
+          {errors.email && (
+            <span className='errorMessage'>
+              Please enter a valid email address
+            </span>
+          )}
+          <CopyRightInfo>
+            © 2021 Sabrina Mueller | All Rights Reserved
+          </CopyRightInfo>
+        </ContactForm>
+      </FadeInWhenVisible>
       <StyledToastContainer />
     </ContactSection>
   );
@@ -141,13 +153,14 @@ export default function Contact() {
 
 const ContactSection = styled.section`
   background-color: var(--gray-dark);
-  padding-bottom: 5rem;
+  padding: 1.5rem 0 10rem 0;
+  position: relative;
 
   h1 {
     font-family: var(--ff-cursive-alt);
     font-size: 3.5rem;
     text-align: center;
-    padding: 2rem;
+    padding-top: 2rem;
     color: var(--red);
     margin-bottom: 3rem;
   }
@@ -166,6 +179,15 @@ const ContactSection = styled.section`
     letter-spacing: 0.1rem;
     font-size: 1.3rem;
   }
+`;
+
+const ContactInfo = styled.p`
+  text-align: center;
+  color: var(--orange-light);
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+  width: 40vw;
+  margin: 0 auto;
 `;
 
 const ContactForm = styled.form`
@@ -222,7 +244,7 @@ const ContactForm = styled.form`
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-    margin-bottom: 0.5rem;
+    margin: 1rem 0 0.5rem 0;
 
     &:hover {
       background-color: #8a0002;
@@ -238,9 +260,10 @@ const ContactForm = styled.form`
     font-weight: bold;
     background-color: var(--orange);
     padding: 0.5rem;
-    margin: 0.3rem;
     border-radius: 100vw;
     font-size: 1rem;
+    z-index: 100;
+    margin: 0.5rem 0;
   }
 `;
 
@@ -251,4 +274,14 @@ const StyledToastContainer = styled(ToastContainer)`
     background-color: var(--blue-alt);
     color: var(--white);
   }
+`;
+
+const CopyRightInfo = styled.p`
+  position: absolute;
+  bottom: 2rem;
+  color: var(--gray-light);
+  text-align: center;
+  display: grid;
+  align-items: center;
+  font-size: 0.9rem;
 `;
