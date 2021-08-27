@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components/macro';
 
 import FadeInWhenVisible from '../animations/FadeInWhenVisible';
@@ -260,6 +261,7 @@ const Iphone8 = styled.div`
       border-radius: 4px;
       height: 667px;
       width: 375px;
+      z-index: 300;
     }
 
     .device-stripe {
