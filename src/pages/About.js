@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import Experience from '../components/Experience';
 import FadeInWhenVisible from '../animations/FadeInWhenVisible';
 import TechStack from '../components/TechStack';
 import TechValues from '../components/TechValues';
@@ -27,6 +28,7 @@ export default function About() {
           have an app idea or want to work together feel free to get in touch
           with me!
         </Paragraph>
+        <Experience />
       </AboutMeSection>
       <TechSection>
         <h2>My Tech Values</h2>

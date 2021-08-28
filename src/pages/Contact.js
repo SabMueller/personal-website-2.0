@@ -125,7 +125,7 @@ export default function Contact() {
             </div>
           </div>
           <button className='submit-btn' type='submit'>
-            Submit
+            Send Message
           </button>
           {errors.name && (
             <span className='errorMessage'>{errors.name.message}</span>
