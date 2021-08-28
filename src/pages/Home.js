@@ -1,31 +1,21 @@
 import styled, { keyframes } from 'styled-components';
 import arrowRight from '../images/arrowRight.png';
-import Navigation from '../components/Navigation';
-import About from '../components/About';
-import Portfolio from '../components/Portfolio';
-import Contact from '../components/Contact';
 
 export default function Home() {
   return (
-    <>
-      <Main id='home'>
-        <BackgroundShapes />
-        <h2>Hi, nice to meet you! I'm</h2>
-        <h1>Sabrina Mueller,</h1>
-        <h2>a passionate</h2>
-        <Headline>Web Developer</Headline>
-        <StyledLink href='#portfolio'>
-          <Button>
-            View My Projects
-            <img src={arrowRight} alt='arrow icon' />
-          </Button>
-        </StyledLink>
-      </Main>
-      <Navigation />
-      <About />
-      <Portfolio />
-      <Contact />
-    </>
+    <Main id='home'>
+      <BackgroundShapes />
+      <h2>Hi, nice to meet you! I'm</h2>
+      <h1>Sabrina Mueller,</h1>
+      <h2>a passionate</h2>
+      <Headline>Web Developer</Headline>
+      <StyledLink href='#portfolio'>
+        <Button>
+          View My Projects
+          <img src={arrowRight} alt='arrow icon' />
+        </Button>
+      </StyledLink>
+    </Main>
   );
 }
 

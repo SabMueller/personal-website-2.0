@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-/* import About from './pages/About';
-import Contact from './pages/Contact'; */
+import React, { useEffect, useState } from 'react';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import Home from './pages/Home';
-/* import Navigation from './components/Navigation';
-import Portfolio from './pages/Portfolio'; */
-import { useEffect } from 'react/cjs/react.development';
+import Navigation from './components/Navigation';
+import Portfolio from './pages/Portfolio';
 import Loading from './animations/Loading';
 
 function App() {
@@ -21,7 +20,15 @@ function App() {
   return (
     <div className='App'>
       {isLoading && <Loading />}
-      {isStandardView && <Home />}
+      {isStandardView && (
+        <>
+          <Home />
+          <Navigation />
+          <About />
+          <Portfolio />
+          <Contact />
+        </>
+      )}
     </div>
   );
 }
