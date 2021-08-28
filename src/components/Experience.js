@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import FadeInWhenVisible from '../animations/FadeInWhenVisible';
 
 export default function Experience() {
   return (
@@ -7,43 +8,50 @@ export default function Experience() {
       <Timeline>
         <Line>
           <FirstDot />
-          <ExperienceWrapper>
-            <FirstExperienceBox>
-              <TriangleRight />
-              <DateLocationWrapper>
-                <h4>Sept. 21 - Now</h4>
-                <h4>Ismaning / Remote, Germany</h4>
-              </DateLocationWrapper>
-              <Position>
-                Associate IT Consultant Artificial Intelligence & Data Analytics
-              </Position>
-              <Organization>.msg systems ag</Organization>
-            </FirstExperienceBox>
-          </ExperienceWrapper>
+          <FadeInWhenVisible>
+            <ExperienceWrapper>
+              <FirstExperienceBox>
+                <TriangleRight />
+                <DateLocationWrapper>
+                  <h4>Sept. 21 - Now</h4>
+                  <h4>Ismaning / Remote, Germany</h4>
+                </DateLocationWrapper>
+                <Position>
+                  Associate IT Consultant Artificial Intelligence & Data
+                  Analytics
+                </Position>
+                <Organization>.msg systems ag</Organization>
+              </FirstExperienceBox>
+            </ExperienceWrapper>
+          </FadeInWhenVisible>
           <SecondDot />
-          <ExperienceWrapper>
-            <SecondExperienceBox>
-              <TriangleLeft />
-              <DateLocationWrapper>
-                <h4>Apr. 21 - Jul. 21</h4>
-                <h4>Munich / Remote, Germany</h4>
-              </DateLocationWrapper>
-              <Position>Trainee Web Development</Position>
-              <Organization>neuefische</Organization>
-            </SecondExperienceBox>
-          </ExperienceWrapper>
+          <FadeInWhenVisible>
+            <ExperienceWrapper>
+              <SecondExperienceBox>
+                <TriangleLeft />
+                <DateLocationWrapper>
+                  <h4>Apr. 21 - Jul. 21</h4>
+                  <h4>Munich / Remote, Germany</h4>
+                </DateLocationWrapper>
+                <Position>Trainee Web Development</Position>
+                <Organization>neuefische</Organization>
+              </SecondExperienceBox>
+            </ExperienceWrapper>
+          </FadeInWhenVisible>
           <ThirdDot />
-          <ExperienceWrapper>
-            <ThirdExperienceBox>
-              <TriangleRight />
-              <DateLocationWrapper>
-                <h4>Jan. 17 - Sept. 20</h4>
-                <h4>Goerisried, Germany</h4>
-              </DateLocationWrapper>
-              <Position>Business Owner</Position>
-              <Organization>M&P Facility Management</Organization>
-            </ThirdExperienceBox>
-          </ExperienceWrapper>
+          <FadeInWhenVisible>
+            <ExperienceWrapper>
+              <ThirdExperienceBox>
+                <TriangleRight />
+                <DateLocationWrapper>
+                  <h4>Jan. 17 - Sept. 20</h4>
+                  <h4>Goerisried, Germany</h4>
+                </DateLocationWrapper>
+                <Position>Business Owner</Position>
+                <Organization>M&P Facility Management</Organization>
+              </ThirdExperienceBox>
+            </ExperienceWrapper>
+          </FadeInWhenVisible>
         </Line>
       </Timeline>
     </section>
