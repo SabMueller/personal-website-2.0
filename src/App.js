@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Navigation from './components/Navigation';
 import Portfolio from './pages/Portfolio';
 import { useEffect } from 'react/cjs/react.development';
+import { Switch, Route } from 'react-router-dom';
 import Loading from './animations/Loading';
 
 function App() {
@@ -21,13 +22,15 @@ function App() {
       {isLoading ? (
         <Loading />
       ) : (
-        <section>
-          <Home />
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
           <Navigation />
           <About />
           <Portfolio />
           <Contact />
-        </section>
+        </Switch>
       )}
     </div>
   );

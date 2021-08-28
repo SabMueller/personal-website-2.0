@@ -4,7 +4,7 @@ import { NavHashLink } from 'react-router-hash-link';
 export default function Navigation() {
   return (
     <NavWrapper>
-      <StyledLink smooth to='/#home'>
+      <StyledLink smooth to='/'>
         Home
       </StyledLink>
       <StyledLink to='#about'>About Me</StyledLink>
