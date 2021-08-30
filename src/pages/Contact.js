@@ -198,7 +198,7 @@ const ContactForm = styled.form`
 
   input {
     background-color: #37495f;
-    color: var(--black);
+    color: var(--white);
     border: hidden;
     margin: 0.5rem;
     width: 40vw;
